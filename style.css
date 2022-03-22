@@ -1,0 +1,16 @@
+/***************************** page d'accueil *************************/
+.header{
+    background-image: url("img/SVG/Mergedbar-1.svg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+.link-language{
+    color:#1A519E;
+    border-color: #1A519E;
+}
+.header2{
+    background-color: #F4CF1B;
+}
+.header2 h3{
+    color: #1078AD;
+}
