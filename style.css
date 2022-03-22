@@ -70,12 +70,17 @@
     background-repeat: no-repeat;
 }
 .link-language{
-    color:#1A519E;
-    border-color: #1A519E;
+    color: var(--blue);
+    border-color: var(--blue);
 }
 .header2{
     background-color: #F4CF1B;
 }
-.header2 h3{
-    color: #1078AD;
+.header2 h3 , .partie_1 h3{
+    color: var(--blue);
+}
+.text_accueille{
+    color: #7F7F7F;
+    font-weight: 700;
+    font-size: 24px;
 }
