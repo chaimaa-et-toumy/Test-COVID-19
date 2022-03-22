@@ -11,7 +11,8 @@ include './includes/nav-bar.php';
         N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.
     </p>
 </div>
-<div class="d-flex justify-content-evenly flex-sm-wrap-reverse flex-lg-nowrap text-center p-2">
+<div class="d-flex justify-content-evenly flex-wrap-reverse flex-lg-nowrap text-center p-2">
+
     <div class="partie_1">
         <h3 class="fw-bold">Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des symptômes ?</h3>
         <img src="img/SVG/1f637.svg" alt="icon">
