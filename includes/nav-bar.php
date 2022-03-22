@@ -3,7 +3,7 @@ $header = <<<navbar
 <body>
 <div class="header">
     <div class="logo d-flex justify-content-between px-4">
-        <img src="$path./img/SVG/logo.svg" alt="logo" height="70" width="80" class="py-1">
+      <a href="$path./index.php"> <img src="img/SVG/logo.svg" alt="logo" height="70" width="80" class="py-1"></a>
         <ul class="d-flex list-unstyled">
             <li><a href="#" class="text-dark btn mt-4  $display "> Conseils </a></li>
             <li><a href="#" class="text-dark btn  mt-4 $display"> Accueil </a></li>
