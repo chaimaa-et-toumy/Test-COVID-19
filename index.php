@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>test covid</title>
+    <link rel="icon" href="img/SVG/logo__sante-52.svg" />
+    <title>مرض الفيروس التاجي - اختبر أعراض الفيروس التاجي 19</title>
 </head>
 
 <body>
@@ -24,13 +25,22 @@
             l’infection. En cas de fièvre, prenez du paracétamol.
             N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.</p>
     </div>
-    <div class="d-flex">
-        <div class="partie_1">
+    <div class="d-flex justify-content-evenly flex-sm-wrap-reverse  flex-lg-nowrap text-center p-3">
+        <div class="partie_1 pe-2">
 
+            <h3 class="fw-bold">Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des symptômes ?</h3>
+            <img src="img/SVG/1f637.svg" alt="icon">
+            <p class="text_accueille">
+                Je reste vigilant ? <br>
+                Je programme une téléconsultation ? <br>
+                J'appelle le 141 ? <br>
+                Faites le test pour répondre en citoyen éclairé selon vos symptômes.
+            </p>
 
         </div>
-        <div class="partie_2">
 
+        <div class="partie_2">
+            <img src="img/SVG/Groupe76.png" width="577" alt="background">
         </div>
 
     </div>
