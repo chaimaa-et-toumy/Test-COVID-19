@@ -1,0 +1,64 @@
+:root{
+    --blue : #1078AD;
+    --smotth_blue :#88B7D3;
+}
+
+/* ==========Steper========== */
+.ques-line{
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background: cornflowerblue;
+    z-index: -100;
+}
+.ques-line span{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.ques-line span:nth-child(1){
+    left: -5px;
+    top: -7px;
+}
+.ques-line span:nth-child(2){
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+}
+.ques-line span:nth-child(3){
+    right: -5px;
+    top: -7px;
+}
+.ques-line span:nth-child(1) i{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: -15px;
+    left: -15px;
+    background-color: var(--smotth_blue) ;
+    border-radius: 50%;
+    z-index: -1;
+}
+.ques-line span:nth-child(1) i h5{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+/* ===========Question-button========= */
+.ques-btn button{
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border: 1.7px solid var(--blue);
+    border-radius: 3px;
+    font-weight: 500;
+    color: #ffff;
+}
+.ques-btn button:hover{
+    background-color: var(--smotth_blue);
+}
