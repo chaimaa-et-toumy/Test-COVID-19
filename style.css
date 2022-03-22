@@ -11,6 +11,12 @@
 .header2{
     background-color: #F4CF1B;
 }
-.header2 h3{
+.header2 h3 , .partie_1 h3{
     color: #1078AD;
+}
+.text_accueille{
+    color: #7F7F7F;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 700;
 }
