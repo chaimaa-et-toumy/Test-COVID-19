@@ -1,3 +1,4 @@
+
 :root{
     --blue : #1078AD;
     --smotth_blue :#88B7D3;
@@ -61,4 +62,20 @@
 }
 .ques-btn button:hover{
     background-color: var(--smotth_blue);
+}
+/***************************** page d'accueil *************************/
+.header{
+    background-image: url("img/SVG/Mergedbar-1.svg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+.link-language{
+    color:#1A519E;
+    border-color: #1A519E;
+}
+.header2{
+    background-color: #F4CF1B;
+}
+.header2 h3{
+    color: #1078AD;
 }
