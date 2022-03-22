@@ -10,7 +10,7 @@
     <body>
     <!-- steper -->
 
-    <div class="d-flex justify-content-center w-100 mt-5">
+    <div class="d-flex justify-content-center w-100 mt-5 mb-4">
         <div class="col-md-6 col-sm-8 col-11">
             <div class="ques-line">
                 <span><i><h5>Information</h5></i></span>
@@ -22,9 +22,9 @@
 
     <!-- button -->
 
-    <div class="ques-btn d-flex justify-content-around w-100 mt-5">
-        <button class="btn">Previous Question</button>
-        <button class="btn">Next Question</button>
+    <div class=" d-flex justify-content-around w-100 mt-5">
+        <button class="ques-btn">Previous Question</button>
+        <button class="ques-btn">Next Question</button>
     </div>
     </body>
     </html>
