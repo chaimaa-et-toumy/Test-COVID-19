@@ -45,14 +45,14 @@
 .ques-line span:nth-child(1) i h5{
     position: absolute;
     left: 0;
-    top: 100px;
+    top: 50px;
     font-size: 14px;
     font-weight: 500;
     color: black;
 }
 
 /* ===========Question-button========= */
-.ques-btn button{
+.ques-btn{
     padding: 10px 20px;
     background-color: var(--blue);
     border: 1.7px solid var(--blue);
@@ -60,7 +60,7 @@
     font-weight: 500;
     color: #ffff;
 }
-.ques-btn button:hover{
+.ques-btn:hover{
     background-color: var(--smotth_blue);
 }
 /***************************** page d'accueil *************************/
