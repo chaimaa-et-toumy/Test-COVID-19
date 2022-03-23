@@ -34,7 +34,8 @@ include './includes/nav-bar.php';
             Faites le test pour répondre en citoyen éclairé selon vos symptômes.
         </p>
 
-        <button class="ques-btn btn_test w-100 fw-bold fs-5"> Démarrer le test </button>
+        <a href="view/introduction" class="btn ques-btn btn_test w-100 fw-bold fs-5 mb-sm-4 mb-lg-0"> Démarrer le test
+        </a>
 
     </div>
 
