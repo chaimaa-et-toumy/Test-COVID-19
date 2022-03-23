@@ -84,3 +84,10 @@
     font-weight: 700;
     font-size: 24px;
 }
+/***************************** page d'introduction *************************/
+.introduction h1{
+    color: var(--blue1);
+}
+.introduction .content{
+    background-color:  var(--smotth_blue);
+}
