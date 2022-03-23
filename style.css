@@ -1,61 +1,78 @@
 
 :root{
-    --blue : #1078AD;
+    --blue1 : #1078AD;
     --smotth_blue :#88B7D3;
+    --green1 : #026534;
 }
-
+/* ================ */
+.blue{
+    background-color: var(--blue1);
+}
+.green1{
+    color: var(--green1);
+}
 /* ==========Steper========== */
 .ques-line{
     position: relative;
-    height: 4px;
+    height: 3px;
     width: 100%;
-    background: cornflowerblue;
+    background: var(--green1);
     z-index: -100;
 }
 .ques-line span{
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
 }
 .ques-line span:nth-child(1){
     left: -5px;
-    top: -7px;
+    top: -5px;
 }
 .ques-line span:nth-child(2){
     left: 50%;
-    top: -7px;
+    top: -5px;
     transform: translateX(-50%);
 }
 .ques-line span:nth-child(3){
     right: -5px;
-    top: -7px;
+    top: -5px;
 }
 .ques-line span:nth-child(1) i{
     position: absolute;
-    width: 46px;
-    height: 46px;
-    top: -15px;
-    left: -15px;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    left: -10px;
     background-color: var(--smotth_blue) ;
     border-radius: 50%;
     z-index: -1;
 }
-.ques-line span:nth-child(1) i h5{
+.ques-line span h5{
     position: absolute;
-    left: 0;
-    top: 50px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: black;
+}
+.ques-line span:nth-child(1) h5{
+    top: 30px;
+    left: -30px;
+}
+.ques-line span:nth-child(2) h5{
+    top: 30px;
+    left: -35px;
+}
+.ques-line span:nth-child(3) h5{
+    top: 30px;
+    left: -10px;
 }
 
 /* ===========Question-button========= */
 .ques-btn{
     padding: 10px 20px;
-    background-color: var(--blue);
-    border: 1.7px solid var(--blue);
+    background-color: var(--blue1);
+    border: 1.7px solid var(--blue1);
     border-radius: 3px;
     font-weight: 500;
     color: #ffff;
@@ -70,14 +87,41 @@
     background-repeat: no-repeat;
 }
 .link-language{
-    color: var(--blue);
-    border-color: var(--blue);
+    color: var(--blue1);
+    border-color: var(--blue1);
 }
 .header2{
     background-color: #F4CF1B;
 }
-.header2 h3 , .partie_1 h3{
-    color: var(--blue);
+.header2 h3{
+    color: var(--blue1);
+}
+/* ==============progress bar ===============*/
+.progress_bar{
+    position: relative;
+    height: 10px;
+    max-width: 500px;
+    border-radius: 8px;
+    background-color: #E6F1F7;
+    overflow: hidden;
+}
+.progress_bar::after{
+    position: absolute;
+    content: '';
+    width: 20%;
+    height: 100%;
+    background-color: var(--blue1);
+}
+.quiz_num{
+    font-weight: 500;
+    font-style: normal !important;
+    margin-left: 8px;
+}
+.answer{
+    font-size: 18px;
+}
+.partie_2 h4 , .header2 .para_1 {
+    color: var(--blue1);
 }
 .text_accueille{
     color: #7F7F7F;
@@ -90,4 +134,5 @@
 }
 .introduction .content{
     background-color:  var(--smotth_blue);
+    font-weight: 500;
 }
