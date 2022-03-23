@@ -96,6 +96,14 @@
 .header2 h3{
     color: var(--blue1);
 }
+.partie_2 h4 , .header2 .para_1 {
+    color: var(--blue1);
+}
+.text_accueille{
+    color: #7F7F7F;
+    font-weight: 500;
+
+}
 /* ==============progress bar ===============*/
 .progress_bar{
     position: relative;
@@ -120,11 +128,11 @@
 .answer{
     font-size: 18px;
 }
-.partie_2 h4 , .header2 .para_1 {
+/***************************** page d'introduction *************************/
+.introduction h1{
     color: var(--blue1);
 }
-.text_accueille{
-    color: #7F7F7F;
+.introduction .content{
+    background-color:  var(--smotth_blue);
     font-weight: 500;
-
 }
