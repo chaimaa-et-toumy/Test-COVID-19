@@ -128,3 +128,11 @@
 .answer{
     font-size: 18px;
 }
+/***************************** page d'introduction *************************/
+.introduction h1{
+    color: var(--blue1);
+}
+.introduction .content{
+    background-color:  var(--smotth_blue);
+    font-weight: 500;
+}
