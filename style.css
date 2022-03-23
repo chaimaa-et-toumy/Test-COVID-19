@@ -76,11 +76,10 @@
 .header2{
     background-color: #F4CF1B;
 }
-.header2 h3 , .partie_1 h3{
+.partie_2 h4 , .header2 .para_1 {
     color: var(--blue);
 }
 .text_accueille{
     color: #7F7F7F;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 500;
 }
