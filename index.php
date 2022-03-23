@@ -5,7 +5,7 @@ include './includes/head.php';
 include './includes/nav-bar.php';
 ?>
 <div class="text-center header2 p-1">
-    <h3>LA DERNIÈRE INFO MÉDICALE </h3>
+    <h3 class="text-dark">LA DERNIÈRE INFO MÉDICALE </h3>
     <p class="m-1 para_1">
         La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur <br>
         d'aggravation de
