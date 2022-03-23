@@ -84,8 +84,8 @@
     background-repeat: no-repeat;
 }
 .link-language{
-    color:#1A519E;
-    border-color: #1A519E;
+    color: var(--blue);
+    border-color: var(--blue);
 }
 .header2{
     background-color: #F4CF1B;
@@ -119,4 +119,12 @@
 }
 .answer{
     font-size: 18px;
+}
+.partie_2 h4 , .header2 .para_1 {
+    color: var(--blue);
+}
+.text_accueille{
+    color: #7F7F7F;
+    font-weight: 500;
+
 }
