@@ -1,30 +1,56 @@
-<DOCTYPE en>
-    <html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" href="../style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<?php 
+    $path = ".";
+    $display = "d-none";
+    include '../includes/head.php'; 
+    include '../includes/nav-bar.php'; 
+?>
 
-
-    </head>
-    <body>
     <!-- steper -->
-
-    <div class="d-flex justify-content-center w-100 mt-5 mb-4">
-        <div class="col-md-6 col-sm-8 col-11">
+    <div class="d-flex justify-content-center w-100 mt-4">
+        <div class="col-md-4 col-sm-7 col-11">
             <div class="ques-line">
-                <span><i><h5>Information</h5></i></span>
-                <span><i><h5>Information</h5></i></span>
-                <span><i></i></span>
+                <span><i></i><h5>Information</h5></span>
+                <span><i></i><h5>Questionnaire</h5></span>
+                <span><i></i><h5>Resulte</h5></span>
             </div>
         </div>
     </div>
 
-    <!-- button -->
-
-    <div class=" d-flex justify-content-around w-100 mt-5">
-        <button class="ques-btn">Previous Question</button>
-        <button class="ques-btn">Next Question</button>
+    <!-- Progress bar -->
+    <div class="prgress-bar-container d-flex justify-content-center align-items-center w-100 " style="margin-top:70px;">
+        <span class="progress_bar col-md-5 col-sm-7 col-10"></span>
+        <i class="quiz_num"><span>1</span>/23</i>
     </div>
+
+    <div class="container-fluid mt-4 mb-5">
+        <div class="d-flex flex-column align-items-center w-100">
+            <div class="col-md-8 col-sm-9 col-11">
+                <div class="p-md-4 p-2">
+                    <div class="quiz-container text-muted">
+                        <div class="Question fw-bold h4 text-muted">
+                            <p>Get started with Bootstrap, the world’s most popular framework for building responsive</p>
+                        </div>
+                        <div class="answer mt-5 ms-4 d-flex flex-column gap-2" >
+                            <div>
+                                <input type="radio" id="yes" class="form-check-input">
+                                <label for="yes">Oui</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="no" class="form-check-input">
+                                <label for="no">Non</label>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class=" d-flex justify-content-around w-100 mt-4" style="margin-top:200px;">
+                            <button class="ques-btn" id="previous_quiz">Previous Question</button>
+                            <button class="ques-btn" id="next_quiz">Next Question</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>           
+    </div>
+
+    
     </body>
     </html>
