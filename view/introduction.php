@@ -4,20 +4,20 @@ $display ="d-none";
 include '../includes/head.php';
 include '../includes/nav-bar.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="/style.css">
-    <title>introduction</title>
-</head>
-<body style="height:100vh;">
-    <main class=" introduction d-flex flex-column justify-content-center align-items-center gap-5" style="height:80vh;">
-        <div class="content card p-3 px-5 " style="width: 70%;">
+
+
+    <main class=" introduction d-flex flex-column justify-content-center align-items-center gap-5 mt-3">
+        <!-- steper -->
+        <div class="d-flex justify-content-center w-100 my-4 ">
+            <div class="col-md-4 col-sm-7 col-9">
+                <div class="ques-line">
+                    <span><i></i><h5>Information</h5></span>
+                    <span><i></i><h5>Questionnaire</h5></span>
+                    <span><i></i><h5>Resulte</h5></span>
+                </div>
+            </div>
+        </div>
+        <div class="content card p-3 px-5 mt-5" style="width: 70%;">
             
                 <h1 class="card-title text-center " >Préambule</h1>
                 
@@ -33,7 +33,8 @@ include '../includes/nav-bar.php';
                 <p class=" text-center">Les informations de cette application est le premier niveau de la détection des cas possibles du COVID-19. </p>
             
         </div>
-        <button class="ques-btn fw-bold w-25 fs-5" >Démarrer le test</button>
+        <a href="questionnaire.php" class="ques-btn fw-bold w-25 fs-5 text-center text-decoration-none" >Démarrer le test</a>
+        
     </main>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
