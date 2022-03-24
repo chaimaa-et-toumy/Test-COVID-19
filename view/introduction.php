@@ -6,7 +6,7 @@ include '../includes/nav-bar.php';
 ?>
 
 
-    <main class=" introduction d-flex flex-column justify-content-center align-items-center gap-5 mt-3">
+    <main class=" introduction d-flex flex-column justify-content-center align-items-center gap-4 mt-3">
         <!-- steper -->
         <div class="d-flex justify-content-center w-100 my-4 ">
             <div class="col-md-4 col-sm-7 col-9">
@@ -17,11 +17,11 @@ include '../includes/nav-bar.php';
                 </div>
             </div>
         </div>
-        <div class="content card p-3 px-5 mt-5" style="width: 70%;">
+        <div class="content card p-3 px-5 mt-2" style="width: 70%;">
             
                 <h1 class="card-title text-center " >Préambule</h1>
                 
-                <p class="card-text text-center">L’application est fournie à titre gratuit, en l’état,
+                <p class="card-text text-center m-0">L’application est fournie à titre gratuit, en l’état,
                     uniquement à des fins d’information pour contribuer à fluidifier la prise en
                     charge des personnes par les services d’urgences pendant l’épidémie de Coronavirus
                     COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et
