@@ -134,5 +134,10 @@
 }
 .introduction .content{
     background-color:  var(--smotth_blue);
-    font-weight: 500;
+    
+}
+/***************************** page d'resulte *************************/
+.resulte .content{
+    background-color:  var(--blue1);
+    
 }
