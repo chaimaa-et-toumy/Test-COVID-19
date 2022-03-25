@@ -32,11 +32,11 @@
                         </div>
                         <div class="answer mt-5 ms-4 d-flex flex-column gap-2" >
                             <div>
-                                <input type="radio" id="yes" class="form-check-input">
+                                <input type="radio" id="yes" class="form-check-input" class="checked_input">
                                 <label for="yes">Oui</label>
                             </div>
                             <div>
-                                <input type="radio" id="no" class="form-check-input">
+                                <input type="radio" id="no" class="form-check-input" class="checked_input">
                                 <label for="no">Non</label>
                             </div>
                         </div>
@@ -51,6 +51,6 @@
         </div>           
     </div>
 
-    
+    <script src="../js/script.js"></script>
     </body>
     </html>
