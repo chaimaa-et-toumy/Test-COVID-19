@@ -13,6 +13,10 @@ include '../includes/nav-bar.php';
 .question-color {
     color: #787878;
 }
+
+.bg-progress {
+    background-color: var(--blue1) !important;
+}
 </style>
 <!-- steper -->
 <div class="d-flex justify-content-center w-100 mt-4">
@@ -32,9 +36,13 @@ include '../includes/nav-bar.php';
 </div>
 
 <!-- Progress bar -->
-<div class="prgress-bar-container d-flex justify-content-center align-items-center w-100" style="margin-top:70px;">
-    <span class="progress_bar col-md-5 col-sm-7 col-10"></span>
-    <i class="nbr-Q"><span>1</span>/23</i>
+<div class="d-flex justify-content-center mt-5">
+    <div class="progress  col-md-5 col-sm-7 col-10 mt-1">
+        <div class="progress-bar bg-progress" style="width:4.55%;">
+        </div>
+    </div>
+    <span class="nbr-Q px-2">1/23</span>
+
 </div>
 <div class="d-flex justify-content-center mt-5 ">
     <div id="carouselExampleControls" class="carousel slide d-flex flex-column gap-5" data-bs-interval="false">
@@ -46,12 +54,12 @@ include '../includes/nav-bar.php';
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                         value="option1">
-                    <label class="form-check-label" for="inlineRadio1"> Oui </label>
+                    <label class="form-check-label" for="inlineRadio1">Oui</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                         value="option2">
-                    <label class="form-check-label" for="inlineRadio2"> Non </label>
+                    <label class="form-check-label" for="inlineRadio2">Non</label>
                 </div>
             </div>
             <div class="carousel-item">
@@ -59,7 +67,7 @@ include '../includes/nav-bar.php';
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                         value="option1">
-                    <label class="form-check-label" for="inlineRadio1"> Oui </label>
+                    <label class="form-check-label" for="inlineRadio1">Oui</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
@@ -120,6 +128,10 @@ include '../includes/nav-bar.php';
                 data-bs-slide="next">
                 suivant
             </button>
+            <button class="btn fw-bold suivant text-white px-4 py-2 btn-termine d-none"
+                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                Termine le test
+            </button>
         </div>
     </div>
 </div>
@@ -128,5 +140,5 @@ include '../includes/nav-bar.php';
 </script>
 <script src="../js/script.js"></script>
 </body>
-</html>
 
+</html>
