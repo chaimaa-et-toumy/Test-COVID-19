@@ -44,7 +44,6 @@ include '../includes/nav-bar.php';
     <span class="nbr-Q px-2">1/23</span>
 
 </div>
-
 <div class="d-flex justify-content-center mt-5 ">
     <div id="carouselExampleControls" class="carousel slide d-flex flex-column gap-5" data-bs-interval="false">
         <div class="carousel-inner text-center px-sm-5">
@@ -120,7 +119,6 @@ include '../includes/nav-bar.php';
             </div>
         </div>
 
-
         <div class="buttons d-flex justify-content-center gap-5">
             <button class="btn fw-bold precedent text-white px-4 py-2 btn-prv" data-bs-target="#carouselExampleControls"
                 data-bs-slide="prev">
@@ -141,7 +139,6 @@ include '../includes/nav-bar.php';
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
 </script>
 <script src="../js/script.js"></script>
-
 </body>
 
 </html>
