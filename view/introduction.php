@@ -33,7 +33,7 @@ include '../includes/nav-bar.php';
                 <p class=" text-center">Les informations de cette application est le premier niveau de la détection des cas possibles du COVID-19. </p>
             
         </div>
-        <a href="questionnaire.php" class="ques-btn fw-bold w-25 fs-5 text-center text-decoration-none text-white" >Démarrer le test</a>
+        <a href="questionnaire.php" class="ques-btn fw-bold fs-5 text-center text-decoration-none text-white w-25" >Démarrer le test</a>
         
     </main>
     

@@ -17,7 +17,7 @@ include '../includes/nav-bar.php';
                 </div>
             </div>
         </div>
-        <h2 class="pt-2 text-success m-0">Lorem ipsum dolor sit amet consectetur.</h2>
+        <h2 class="pt-2 text-center text-success m-0">Lorem ipsum dolor sit amet consectetur.</h2>
 
         <div class="content card  px-5 pb-4 pt-2 rounded-3" style="width: 50%;">
                 <h1 class=" text-center text-white" >d’urgences</h1>
