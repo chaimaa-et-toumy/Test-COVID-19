@@ -213,11 +213,11 @@ include '../includes/nav-bar.php';
                     <p class="h3 question-color">Actuellement, comment vous vous sentez ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio19" value="option1">
+                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio19" value="Non">
                         <label class="form-check-label fs-5" for="inlineRadio19">Bien</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5 " type="radio" name="sentez" id="inlineRadio20" value="option2">
+                        <input class="form-check-input inputs fs-5 " type="radio" name="sentez" id="inlineRadio20" value="Non">
                         <label class="form-check-label fs-5" for="inlineRadio20">Assez bien</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -235,7 +235,7 @@ include '../includes/nav-bar.php';
                         spécifique.</p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_age" name="age" placeholder="15-110" />
+                            <input type="number" class="form-control inputs" id="input_age" name="age" placeholder="15-110" value="" />
                             <span" class="btn btn-light" style="border: 1px solid #ced4da;"> Age </span>
                         </div>
                     </div>
@@ -245,7 +245,7 @@ include '../includes/nav-bar.php';
                         qui est un facteur influençant le risque de complications de l’infection.</p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_poid" name="poids" placeholder="20-250" />
+                            <input type="number" class="form-control inputs" id="input_poid" name="poids" placeholder="20-250" value="" />
                             <span" class="btn btn-light" style="border: 1px solid #ced4da;"> Kg </span>
                         </div>
                     </div>
@@ -256,7 +256,7 @@ include '../includes/nav-bar.php';
                         corporelle qui est un facteur influençant le risque de complications de l’infection.</p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_tall" name="taille" placeholder="80-250" />
+                            <input type="number" class="form-control inputs" id="input_tall" name="taille" placeholder="80-250" value="" />
                             <span class="btn btn-light" style="border: 1px solid #ced4da;"> cm </span>
                         </div>
                     </div>
