@@ -54,7 +54,7 @@ include '../includes/nav-bar.php';
 </div>
 <div class="mt-5">
     <div id="carouselExampleControls" class="carousel slide d-flex flex-column p-4"
-        data-bs-interval="false">
+        data-bs-interval="false" data-bs-touch="false">
 
             <div class="carousel-inner text-center  px-sm-5">
             <!--  -->
@@ -237,7 +237,7 @@ include '../includes/nav-bar.php';
                         spécifique.</p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_age"  placeholder="15-110" />
+                            <input type="number" class="form-control inputs" id="input_age" min="15" max="110"   placeholder="15-110" />
                             <span" class="btn btn-light" style="border: 1px solid #ced4da;"> Age </span>
                         </div>
                     </div>
