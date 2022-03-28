@@ -1,3 +1,79 @@
+/*********** Disable the button next untel the checkbox has been checked ********* */
+// =============================================
+const demarrer = document.getElementById("demarrer");
+const progress_bar2 = document.getElementById("progress_bar");
+const btn_n_p = document.getElementById("buttons-np");
+
+// get inputs that have type of number
+const input_tempr = document.getElementById("input_temperateur");
+const input_age = document.getElementById("input_age");
+const input_poid = document.getElementById("input_poid");
+const input_tall = document.getElementById("input_tall");
+// ====
+
+// get stepper element 
+const step_info = document.getElementById("stepper_info");
+const step_ques = document.getElementById("stepper_ques");
+const step_reslt = document.getElementById("stepper_reslt");
+
+const next_ques = document.getElementById("next_ques");
+const prev_ques = document.getElementById("prev_ques");
+const inputs = document.querySelectorAll(".inputs");
+ next_ques.disabled = true;
+
+demarrer.addEventListener("click" , () => {
+    btn_n_p.classList.replace("d-none","d-flex"); 
+    progress_bar2.classList.replace("d-none","d-flex");
+    // ==
+    step_info.classList.replace("stepper-blue","test");
+    step_ques.classList.replace("test","stepper-blue");
+
+})
+
+// ====creat object
+let obj = {};
+
+next_ques.addEventListener('click' , function(){
+    obj.push(input.key,input.value);
+})
+// prev_ques.onclick=function(){
+//     btn_n_p.classList.replace("d-flex","d-none"); 
+//     progress_bar2.classList.replace("d-flex","d-none");
+//     step_info.classList.replace("test","stepper-blue");
+//     step_ques.classList.replace("stepper-blue","test");
+// }
+
+inputs.forEach(input => {
+
+    input.addEventListener("change" , function() {
+        if(input.checked){
+            //Set the disabled property to FALSE and enable the button.
+            next_ques.disabled = false;
+            console.log('checked')
+        }
+        else if(input_tempr.value >= 34 && input_tempr.value <= 42){
+            next_ques.disabled = false;
+        }
+        else if(input_age.value >= 15 && input_age.value <= 105){
+            next_ques.disabled = false;
+        }
+        else if(input_poid.value >= 20 && input_poid.value <= 150){
+            next_ques.disabled = false;
+        }
+        else{
+            //Otherwise, disable the submit button.
+            next_ques.disabled = true;
+            console.log('false')
+        }     
+    })
+    next_ques.addEventListener("click" , function() {
+        next_ques.disabled = true;
+    })
+})
+
+// ===================
+
+
 /**** progress bar ****/
 let prev = document.querySelector(".btn-prv");
 let next = document.querySelector(".btn-next");
@@ -24,7 +100,6 @@ next.addEventListener("click", () =>{
        
         progress_bar.style.width = prog+"%";
         nbr_Q.innerHTML = nbrQues +"/23";
-        console.log(prog);
     }
 
 
@@ -47,78 +122,5 @@ prev.addEventListener("click", () =>{
     }
 })
 
-/*********** Disable the button next untel the checkbox has been checked ********* */
-console.log('hi')
-// let surveydata =[
-//     {
-//         id : 1,
-//         question : 'Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ?',
-//         choise1 : 'yes',
-//         choise2 : 'no',
-//     },
-//     {
-//         id : 2,
-//         question : 'Quelle est votre température corporelle ?',
-//         choise1 : 'yes',
-//         choise2 : 'no',
-//     },
-//     {
-//         id : 3,
-//         question : 'Avez-vous eu des courbatures inhabituelles au cours des derniers jours ?',
-//         choise1 : 'yes',
-//         choise2 : 'no',
-//     },
-// ]
-
-// const survey = document.querySelector(".survey-container");
-// const question = document.getElementById("question");
-// const next_btn = document.getElementById("next_question");
-// const option = document.querySelector(".option");
-// const choise_yes = document.getElementById("yes");
-// const choise_no = document.getElementById("no");
-// const choise_idk = document.getElementById("idk");
-// const current_question = 0 ;
-
-
-// let loaddata =() => {
-
-// }
-
-
-
-
-
-
-// // 
-// loadSurvey()
-// function loadSurvey() {
-//     deselectAnswers()
-//     const currentSurveydata = surveydata[current_question]
-//     question.innerText = currentSurveydata.question
-// }
-// function deselectAnswers()
-    
-// next_btn.addEventListener('click',() => {
-//     current_question++
-// })
-
-
-// =============================================
-let next_quiz = document.querySelector("#next_quiz");
-let inputs = document.querySelector(".checked_input");
-
-
-
-next_quiz.addEventListener('click' , function(inputs){
-    if(inputs.checked){
-        //Set the disabled property to FALSE and enable the button.
-        document.getElementById("next_quiz").disabled = false;
-        console.log('invalid')
-    } else{
-        //Otherwise, disable the submit button.
-        document.getElementById("next_quiz").disabled = true;
-        console.log('valid')
-    }
-})
 
 
