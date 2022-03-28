@@ -5,26 +5,26 @@ include '../includes/head.php';
 include '../includes/nav-bar.php';
 ?>
 <style>
-.precedent,
-.suivant {
-    background-color: var(--blue1) !important;
-}
+    .precedent,
+    .suivant {
+        background-color: var(--blue1) !important;
+    }
 
-.question-color {
-    color: #787878;
-    font-size: 32px;
-    font-family: 'Cairo', sans-serif;
-    margin-bottom: 35px;
-}
+    .question-color {
+        color: #787878;
+        font-size: 32px;
+        font-family: 'Cairo', sans-serif;
+        margin-bottom: 35px;
+    }
 
 
-.bg-progress {
-    background-color: var(--blue1) !important;
-}
+    .bg-progress {
+        background-color: var(--blue1) !important;
+    }
 
-.value {
-    font-size: 20px;
-}
+    .value {
+        font-size: 20px;
+    }
 </style>
 <!-- steper -->
 <div class="d-flex justify-content-center w-100 mt-4">
@@ -76,26 +76,23 @@ include '../includes/nav-bar.php';
                         <p class=" text-center">Les informations de cette application est le premier niveau de la
                             détection des cas possibles du COVID-19. </p>
                     </div>
-                    <button id="demarrer"
-                        class="ques-btn fw-bold precedent text-white text-decoration-none px-4 py-2 mt-4 h4"
-                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <button id="demarrer" class="ques-btn fw-bold precedent text-white text-decoration-none px-4 py-2 mt-4 h4" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                         Démarrer le test
                     </button>
                 </main>
             </div>
-            <form name="symptome">
+            <form name="Covid">
+                <!-- symptome -->
                 <div class="carousel-item">
                     <p class="h3 question-color">Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours
                         (frissons, sueurs) ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" key="fievere" type="radio" name="fievre"
-                            id="inlineRadio1" value="oui">
+                        <input class="form-check-input inputs fs-5" key="fievere" type="radio" name="fievre" id="inlineRadio1" value="oui">
                         <label class="form-check-label value" for="inlineRadio1">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="fievre" id="inlineRadio2"
-                            value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="fievre" id="inlineRadio2" value="Non">
                         <label class="form-check-label value" for="inlineRadio2">Non</label>
                     </div>
                 </div>
@@ -103,8 +100,7 @@ include '../includes/nav-bar.php';
                     <p class="h3 question-color">Quelle est votre température corporelle ? </p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_temperateur" placeholder="34-42"
-                                name="température" value="" />
+                            <input type="number" class="form-control inputs" id="input_temperateur" placeholder="34-42" name="température" value="" />
                             <span class="btn btn-light" style="border: 1px solid #ced4da;">degre</span>
                         </div>
                     </div>
@@ -114,13 +110,11 @@ include '../includes/nav-bar.php';
                         Ces derniers jours , avez-vous une toux ou une augmentation de votre toux habituelle ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="toux" id="inlineRadio3"
-                            value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="toux" id="inlineRadio3" value="oui">
                         <label class="form-check-label value" for="inlineRadio3">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="toux" id="inlineRadio4"
-                            value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="toux" id="inlineRadio4" value="Non">
                         <label class="form-check-label value" for="inlineRadio4">Non</label>
                     </div>
                 </div>
@@ -129,13 +123,11 @@ include '../includes/nav-bar.php';
                         jours ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="courbatures" id="inlineRadio5"
-                            value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="courbatures" id="inlineRadio5" value="oui">
                         <label class="form-check-label value" for="inlineRadio5">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="courbatures" id="inlineRadio6"
-                            value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="courbatures" id="inlineRadio6" value="Non">
                         <label class="form-check-label value" for="inlineRadio6">Non</label>
                     </div>
                 </div>
@@ -143,13 +135,11 @@ include '../includes/nav-bar.php';
                     <p class="h3 question-color">Ces derniers jours, avez-vous un mal de gorge ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="mal" id="inlineRadio7"
-                            value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="mal" id="inlineRadio7" value="oui">
                         <label class="form-check-label value" for="inlineRadio7">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="mal" id="inlineRadio8"
-                            value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="mal" id="inlineRadio8" value="Non">
                         <label class="form-check-label value" for="inlineRadio8">Non</label>
                     </div>
                 </div>
@@ -158,13 +148,11 @@ include '../includes/nav-bar.php';
                         selles molles.
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="diarrhée" id="inlineRadio9"
-                            value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="diarrhée" id="inlineRadio9" value="oui">
                         <label class="form-check-label value" for="inlineRadio9">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="diarrhée" id="inlineRadio10"
-                            value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="diarrhée" id="inlineRadio10" value="Non">
                         <label class="form-check-label value" for="inlineRadio10">Non</label>
                     </div>
                 </div>
@@ -174,13 +162,11 @@ include '../includes/nav-bar.php';
                         à vous reposer plus de la moitié de la journée ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="fatigue" id="inlineRadio11"
-                            value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="fatigue" id="inlineRadio11" value="oui">
                         <label class="form-check-label value" for="inlineRadio11">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="fatigue" id="inlineRadio12"
-                            value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="fatigue" id="inlineRadio12" value="Non">
                         <label class="form-check-label value" for="inlineRadio12">Non</label>
                     </div>
                 </div>
@@ -189,14 +175,25 @@ include '../includes/nav-bar.php';
                         depuis plus de 24h ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="difficultés" id="inlineRadio13"
-                            value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="difficultés" id="inlineRadio13" value="oui">
                         <label class="form-check-label value" for="inlineRadio13">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="difficultés" id="inlineRadio14"
-                            value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="difficultés" id="inlineRadio14" value="Non">
                         <label class="form-check-label value" for="inlineRadio14">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color"> Avez-vous vu apparaître une gêne respiratoire ou une augmentation de votre gêne
+                        respiratoire habituelle ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="gêne_respiratoire" id="inlineRadio15" value="oui">
+                        <label class="form-check-label value" for="inlineRadio15">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="gêne_respiratoire" id="inlineRadio16" value="Non">
+                        <label class="form-check-label value" for="inlineRadio16">Non</label>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -204,51 +201,41 @@ include '../includes/nav-bar.php';
                         inhabituel lorsque vous parlez ou faites un petit effort ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="manque_de_souffle"
-                            id="inlineRadio15" value="oui">
-                        <label class="form-check-label value" for="inlineRadio15">Oui</label>
+                        <input class="form-check-input inputs fs-5" type="radio" name="manque_de_souffle" id="inlineRadio17" value="oui">
+                        <label class="form-check-label value" for="inlineRadio17">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="manque_de_souffle"
-                            id="inlineRadio16" value="Non">
-                        <label class="form-check-label value" for="inlineRadio16">Non</label>
+                        <input class="form-check-input inputs fs-5" type="radio" name="manque_de_souffle" id="inlineRadio18" value="Non">
+                        <label class="form-check-label value" for="inlineRadio18">Non</label>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <p class="h3 question-color">Actuellement, comment vous vous sentez ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio18"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio18">Bien</label>
+                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio19" value="option1">
+                        <label class="form-check-label fs-5" for="inlineRadio19">Bien</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5 " type="radio" name="sentez" id="inlineRadio19"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio19">Assez bien</label>
+                        <input class="form-check-input inputs fs-5 " type="radio" name="sentez" id="inlineRadio20" value="option2">
+                        <label class="form-check-label fs-5" for="inlineRadio20">Assez bien</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio20"
-                            value="oui">
-                        <label class="form-check-label" for="inlineRadio20">Fatigue(e)</label>
+                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio21" value="oui">
+                        <label class="form-check-label fs-5" for="inlineRadio21">Fatigue(e)</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio21"
-                            value="oui">
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio21"
-                            value="oui">
-                        <label class="form-check-label" for="inlineRadio21"> Tres Fatigue(e)</label>
+                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio22" value="oui">
+                        <label class="form-check-label fs-5" for="inlineRadio22"> Tres Fatigue(e)</label>
                     </div>
                 </div>
+                <!-- pronostique -->
                 <div class="carousel-item">
                     <p class="h3 question-color">Quel est votre âge ? Ceci, afin de calculer un facteur de risque
                         spécifique.</p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_age" name="age"
-                                placeholder="15-110" />
+                            <input type="number" class="form-control inputs" id="input_age" name="age" placeholder="15-110" />
                             <span" class="btn btn-light" style="border: 1px solid #ced4da;"> Age </span>
                         </div>
                     </div>
@@ -258,8 +245,7 @@ include '../includes/nav-bar.php';
                         qui est un facteur influençant le risque de complications de l’infection.</p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_poid" name="poids"
-                                placeholder="26" />
+                            <input type="number" class="form-control inputs" id="input_poid" name="poids" placeholder="20-250" />
                             <span" class="btn btn-light" style="border: 1px solid #ced4da;"> Kg </span>
                         </div>
                     </div>
@@ -270,22 +256,143 @@ include '../includes/nav-bar.php';
                         corporelle qui est un facteur influençant le risque de complications de l’infection.</p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_tall" name="taille"
-                                placeholder="80-250" />
+                            <input type="number" class="form-control inputs" id="input_tall" name="taille" placeholder="80-250" />
                             <span class="btn btn-light" style="border: 1px solid #ced4da;"> cm </span>
                         </div>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">Avez-vous de l’hypertension artérielle mal équilibrée ? Ou avez-vous une maladie
+                        cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="hypertension" id="inlineRadio23" value="oui">
+                        <label class="form-check-label value" for="inlineRadio23">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="hypertension" id="inlineRadio24" value="Non">
+                        <label class="form-check-label value" for="inlineRadio24">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Êtes-vous diabétique ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="diabétique" id="inlineRadio25" value="oui">
+                        <label class="form-check-label value" for="inlineRadio25">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="diabétique" id="inlineRadio26" value="Non">
+                        <label class="form-check-label value" for="inlineRadio26">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Avez-vous ou avez-vous eu un cancer ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="cancer" id="inlineRadio27" value="oui">
+                        <label class="form-check-label value" for="inlineRadio27">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="cancer" id="inlineRadio28" value="Non">
+                        <label class="form-check-label value" for="inlineRadio28">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="maladie_respiratoire" id="inlineRadio29" value="oui">
+                        <label class="form-check-label value" for="inlineRadio29">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="maladie_respiratoire" id="inlineRadio30" value="Non">
+                        <label class="form-check-label value" for="inlineRadio30">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Avez-vous une insuffisance rénale chronique dialysée ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="dialysée" id="inlineRadio31" value="oui">
+                        <label class="form-check-label value" for="inlineRadio31">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="dialysée" id="inlineRadio32" value="Non">
+                        <label class="form-check-label value" for="inlineRadio32">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Avez-vous une maladie chronique du foie ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="maladie_chronique" id="inlineRadio33" value="oui">
+                        <label class="form-check-label value" for="inlineRadio33">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="maladie_chronique" id="inlineRadio34" value="Non">
+                        <label class="form-check-label value" for="inlineRadio34">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Êtes-vous enceinte ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="enceinte" id="inlineRadio35" value="oui">
+                        <label class="form-check-label value" for="inlineRadio35">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="enceinte" id="inlineRadio36" value="Non">
+                        <label class="form-check-label value" for="inlineRadio36">Non</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="enceinte" id="inlineRadio37" value="Non">
+                        <label class="form-check-label value" for="inlineRadio37">Homme</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Avez-vous une maladie connue pour diminuer vos défenses immunitaires ?
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="défenses_immunitaires" id="inlineRadio38" value="oui">
+                        <label class="form-check-label value" for="inlineRadio38">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="défenses_immunitaires" id="inlineRadio39" value="Non">
+                        <label class="form-check-label value" for="inlineRadio39">Non</label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="h3 question-color">
+                        Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. Voici quelques exemples : corticoïdes,
+                        méthotrexate, ciclosporine, tacrolimus, azathioprine, cyclophosphamide (liste non exhaustive).
+                    </p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="traitement_immunosuppresseur" id="inlineRadio40" value="oui">
+                        <label class="form-check-label value" for="inlineRadio40">Oui</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="traitement_immunosuppresseur" id="inlineRadio41" value="Non">
+                        <label class="form-check-label value" for="inlineRadio41">Non</label>
+                    </div>
+                </div>
+
 
             </form>
+
         </div>
         <div class="buttons d-none justify-content-center gap-5 mt-5" id="buttons-np">
-            <button class="btn fw-bold precedent text-white px-4 py-2 btn-prv" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev" id="prev_ques">
+            <button class="btn fw-bold precedent text-white px-4 py-2 btn-prv" data-bs-target="#carouselExampleControls" data-bs-slide="prev" id="prev_ques">
                 précedent
             </button>
-            <button class="btn fw-bold suivant text-white px-4 py-2 btn-next" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next" id="next_ques">
+            <button class="btn fw-bold suivant text-white px-4 py-2 btn-next" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
                 suivant
             </button>
             <a href="Resulte.php" class="btn fw-bold suivant text-white px-4 py-2 btn-termine d-none">
@@ -294,8 +401,7 @@ include '../includes/nav-bar.php';
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="../js/script.js"></script>
     </body>
