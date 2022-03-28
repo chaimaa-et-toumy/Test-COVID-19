@@ -235,6 +235,10 @@ include '../includes/nav-bar.php';
                     <div class="form-check form-check-inline">
                         <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio21"
                             value="oui">
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input inputs fs-5" type="radio" name="sentez" id="inlineRadio21"
+                            value="oui">
                         <label class="form-check-label" for="inlineRadio21"> Tres Fatigue(e)</label>
                     </div>
                 </div>
@@ -268,7 +272,7 @@ include '../includes/nav-bar.php';
                         <div class="input-group w-50">
                             <input type="number" class="form-control inputs" id="input_tall" name="taille"
                                 placeholder="80-250" />
-                            <span" class="btn btn-light" style="border: 1px solid #ced4da;"> cm </span>
+                            <span class="btn btn-light" style="border: 1px solid #ced4da;"> cm </span>
                         </div>
                     </div>
                 </div>
