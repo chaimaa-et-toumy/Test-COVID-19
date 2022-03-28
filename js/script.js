@@ -30,12 +30,18 @@ demarrer.addEventListener("click" , () => {
 
 })
 
-prev_ques.addEventListener("click" , () => {
-    btn_n_p.classList.replace("d-flex","d-none"); 
-    progress_bar2.classList.replace("d-flex","d-none");
-    step_info.classList.replace("test","stepper-blue");
-    step_ques.classList.replace("stepper-blue","test");
+// ====creat object
+let obj = {};
+
+next_ques.addEventListener('click' , function(){
+    obj.push(input.key,input.value);
 })
+// prev_ques.onclick=function(){
+//     btn_n_p.classList.replace("d-flex","d-none"); 
+//     progress_bar2.classList.replace("d-flex","d-none");
+//     step_info.classList.replace("test","stepper-blue");
+//     step_ques.classList.replace("stepper-blue","test");
+// }
 
 inputs.forEach(input => {
 
@@ -94,7 +100,6 @@ next.addEventListener("click", () =>{
        
         progress_bar.style.width = prog+"%";
         nbr_Q.innerHTML = nbrQues +"/23";
-        console.log(prog);
     }
 
 

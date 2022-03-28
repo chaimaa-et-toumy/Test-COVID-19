@@ -84,7 +84,7 @@ include '../includes/nav-bar.php';
                         (frissons, sueurs) ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        <input class="form-check-input inputs fs-5" key="fievere" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                             value="option1">
                         <label class="form-check-label value" for="inlineRadio1">Oui</label>
                     </div>
