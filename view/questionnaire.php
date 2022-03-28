@@ -53,7 +53,7 @@ include '../includes/nav-bar.php';
 
 </div>
 <div class="mt-5">
-    <div id="carouselExampleControls" class="carousel slide d-flex flex-column p-4" data-bs-interval="false">
+    <div id="carouselExampleControls" class="carousel slide d-flex flex-column p-4" data-bs-interval="false" data-bs-touch="false">
 
         <div class="carousel-inner text-center  px-sm-5">
             <!--  -->
