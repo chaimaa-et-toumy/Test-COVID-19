@@ -34,7 +34,7 @@ include './includes/nav-bar.php';
             Faites le test pour répondre en citoyen éclairé selon vos symptômes.
         </p>
 
-        <a href="view/introduction.php" class="btn ques-btn btn_test w-100 fw-bold fs-5 mb-sm-4 mb-lg-0"> Démarrer le
+        <a href="view/questionnaire.php" class="btn ques-btn btn_test w-100 fw-bold fs-5 mb-sm-4 mb-lg-0"> Démarrer le
             test
         </a>
 
