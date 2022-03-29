@@ -183,8 +183,10 @@ check.addEventListener("click", function() {
             arri.symptome[answer[i].name] = answer[i].value
 
               /**************************facteur mineur*************************/
-    if(answer.temperature.value >= 39){
-        arri.facteur_min.temperature = answer.temperature.value
+    if (answer.fievre.value == 'oui') {
+        if (answer.temperature.value >= 39) {
+            arri.facteur_min.temperature = answer.temperature.value
+        }
     }
     if(answer.fatigue.value == "oui"){
         arri.facteur_min.fatigue = answer.fatigue.value
@@ -194,8 +196,10 @@ check.addEventListener("click", function() {
     }
     /**************************facteur majeur*************************/
 
-    if(answer.temperature.value <= 35){
-        arri.facteur_maj.temperature = answer.temperature.value
+    if (answer.fievre.value == 'oui') {
+        if (answer.temperature.value <= 35) {
+            arri.facteur_maj.temperature = answer.temperature.value
+        }
     }
     if(answer.gene_respiratoire.value == "oui"){
         arri.facteur_maj.gene_respiratoire = answer.gene_respiratoire.value
