@@ -162,6 +162,35 @@ prev.addEventListener("click", () =>{
 
     }
 })
+// =================result===============
+let arri = new Array();
+let symptome = new Array();
+let prononstique= new Array();
+let facteur_min= new Array();
+let facteur_maj= new Array();
+arri.symptome = symptome;
+arri.prononstique = prononstique;
+arri.facteur_min = facteur_min;
+arri.facteur_maj = facteur_maj;
+
+let check =document.getElementById("check")
+
+check.addEventListener("click", function() {
+    globalThis.answer = document.forms['Covid'];
+
+    for (let i = 0; i < 23; i++) {
+        if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
+            arri.symptome[answer[i].name] = answer[i].value
+
+
+        }
+    }
+    for (let i = 23; i < answer.length ; i++) {
+        if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
+            arri.prononstique[answer[i].name] = answer[i].value
+        }
+    }
+})
 
 
 

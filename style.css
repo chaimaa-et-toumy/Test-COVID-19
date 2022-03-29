@@ -101,24 +101,7 @@
 .text_accueille{
     color: #7F7F7F;
     font-weight: 500;
-
 }
-/* ==============progress bar ===============*/
-/* .progress_bar{
-    position: relative;
-    height: 10px;
-    max-width: 500px;
-    border-radius: 8px;
-    background-color: #E6F1F7;
-    overflow: hidden;
-}
-.progress_bar::after{
-    position: absolute;
-    content: '';
-    width: 20%;
-    height: 100%;
-    background-color: var(--blue1);
-} */
 .quiz_num{
     font-weight: 500;
     font-style: normal !important;
