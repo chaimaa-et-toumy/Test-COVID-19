@@ -19,7 +19,6 @@ const step_reslt = document.getElementById("stepper_reslt");
 const next_ques = document.getElementById("next_ques");
 const prev_ques = document.getElementById("prev_ques");
 const inputs = document.querySelectorAll(".inputs");
-const show_rslt = document.querySelector("#check");
 const ques_contr = document.querySelector(".carousel");
 const result = document.querySelector(".resulte")
  next_ques.disabled = true;
@@ -43,7 +42,9 @@ prev_ques.onclick=function(){
         step_info.classList.replace("test","stepper-blue");
         step_ques.classList.replace("stepper-blue","test");
     }
-    
+    if(nbrQues == 23){
+        
+    }
 }
 next_ques.onclick=function(){
     if(nbrQues == 23){
