@@ -212,7 +212,7 @@ check.addEventListener("click", function() {
         }
     }
     for (let i = 23; i < answer.length ; i++) {
-        if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
+        if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui' || answer[i].type == "number") {
             arri.prononstique[answer[i].name] = answer[i].value
         }
     }
