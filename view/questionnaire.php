@@ -17,7 +17,9 @@ include '../includes/nav-bar.php';
         margin-bottom: 35px;
     }
 
-
+    .carousel-height{
+        min-height: 230px;
+    }
     .bg-progress {
         background-color: var(--blue1) !important;
     }
@@ -36,7 +38,7 @@ include '../includes/nav-bar.php';
             <span><i class="test" id="stepper_ques"></i>
                 <h5>Questionnaire</h5>
             </span>
-            <span><i id="stepper_reslt"></i>
+            <span><i class="test" id="stepper_reslt"></i>
                 <h5>Resulte</h5>
             </span>
         </div>
@@ -44,16 +46,16 @@ include '../includes/nav-bar.php';
 </div>
 
 <!-- Progress bar -->
-<div class="d-none justify-content-center mt-5" id="progress_bar">
-    <div class="progress  col-md-5 col-sm-7 col-10 mt-1">
+<div class="d-none justify-content-center mt-5" id="progress_bar" style="margin-top:100px">
+    <div class="progress col-md-5 col-sm-7 col-10 mt-1">
         <div class="progress-bar bg-progress" style="width:4.55%;">
         </div>
     </div>
     <span class="nbr-Q px-2">1/23</span>
 
 </div>
-<div class="mt-5">
-    <div id="carouselExampleControls" class="carousel slide d-flex flex-column p-4" data-bs-interval="false" data-bs-touch="false">
+<div class="mt-4">
+    <div id="carouselExampleControls" class="carousel-height carousel slide d-flex flex-column p-4" data-bs-interval="false" data-bs-touch="false">
 
         <div class="carousel-inner text-center  px-sm-5">
             <!--  -->
@@ -383,16 +385,37 @@ include '../includes/nav-bar.php';
                         <label class="form-check-label value" for="inlineRadio41">Non</label>
                     </div>
                 </div>
+                </form>
+                
+                    <!--  -->
+                    <main class=" resulte d-flex flex-column justify-content-center align-items-center gap-3 mt-3">
+                        <h2 class="pt-2 text-success m-0">Lorem ipsum dolor sit amet consectetur.</h2>
+
+                        <div class="content card  px-5 pb-4 pt-2 rounded-3" style="width: 82%;">
+                                <h1 class=" text-center text-white" >d’urgences</h1>
+                                
+                                <p class="card-text text-center fs-4 text-warning">L’application est fournie à titre gratuit, en l’état,
+                                    uniquement à des fins d’information pour contribuer à fluidifier la prise en
+                                    charge des personnes par les services d’urgences pendant l’épidémie de Coronavirus
+                                    COVID-19. 
+                                </p>
+                        </div>
+                        <a href="questionnaire.php" class="ques-btn fw-bold fs-5 text-center text-decoration-none text-white" >recommence le test</a> 
+                    </main>
+                    <!--  -->
 
 
-            </form>
-
+           
+           </div>
         </div>
         <div class="buttons d-none justify-content-center gap-5 mt-5" id="buttons-np">
-            <button class="btn fw-bold precedent text-white px-4 py-2 btn-prv" data-bs-target="#carouselExampleControls" data-bs-slide="prev" id="prev_ques">
+            <button class="btn fw-bold precedent text-white px-4 py-2 btn-prv col-md-2" data-bs-target="#carouselExampleControls" data-bs-slide="prev" id="prev_ques">
                 précedent
             </button>
-            <button class="btn fw-bold suivant text-white px-4 py-2 btn-next" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
+            <button class="btn fw-bold suivant text-white px-4 py-2 btn-next col-md-2" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
+                suivant
+            </button>
+            <button class="btn d-none fw-bold suivant text-white px-4 py-2 btn-next col-md-2" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
                 suivant
             </button>
             <a id="check" class="btn fw-bold suivant text-white px-4 py-2 btn-termine d-none">
