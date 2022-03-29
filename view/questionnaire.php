@@ -57,6 +57,7 @@ include '../includes/nav-bar.php';
 <div class="mt-4">
     <div id="carouselExampleControls" class="carousel-height carousel slide d-flex flex-column p-4" data-bs-interval="false" data-bs-touch="false">
 
+    <form name="Covid">
         <div class="carousel-inner text-center  px-sm-5">
             <!--  -->
             <div class="carousel-item active question">
@@ -83,7 +84,7 @@ include '../includes/nav-bar.php';
                     </button>
                 </main>
             </div>
-            <form name="Covid">
+            
                 <!-- symptome -->
                 <div class="carousel-item">
                     <p class="h3 question-color">Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours
@@ -412,10 +413,7 @@ include '../includes/nav-bar.php';
             <button class="btn fw-bold precedent text-white px-4 py-2 btn-prv col-md-2" data-bs-target="#carouselExampleControls" data-bs-slide="prev" id="prev_ques">
                 précedent
             </button>
-            <button class="btn fw-bold suivant text-white px-4 py-2 btn-next col-md-2" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
-                suivant
-            </button>
-            <button class="btn d-none fw-bold suivant text-white px-4 py-2 btn-next col-md-2" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
+            <button class="btn test fw-bold suivant text-white px-4 py-2 btn-next col-md-2" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
                 suivant
             </button>
             <a id="check" class="btn fw-bold suivant text-white px-4 py-2 btn-termine d-none">

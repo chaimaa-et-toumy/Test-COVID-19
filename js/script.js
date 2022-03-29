@@ -19,6 +19,9 @@ const step_reslt = document.getElementById("stepper_reslt");
 const next_ques = document.getElementById("next_ques");
 const prev_ques = document.getElementById("prev_ques");
 const inputs = document.querySelectorAll(".inputs");
+const show_rslt = document.querySelector("#check");
+const ques_contr = document.querySelector(".carousel");
+const result = document.querySelector(".resulte")
  next_ques.disabled = true;
 
 
@@ -44,13 +47,16 @@ prev_ques.onclick=function(){
 }
 next_ques.onclick=function(){
     if(nbrQues == 22){
-        next_ques.innerText ="Terminer le test"
+        next_ques.classList.replace("d-none","test");
+        show_rslt.classList.replace("d-block","d-none");
     }
     if(nbrQues == 23){
         btn_n_p.classList.replace("d-flex","d-none"); 
         progress_bar2.classList.replace("d-flex","d-none");
         step_ques.classList.replace("stepper-blue","test");
         step_reslt.classList.replace("test","stepper-blue");
+        ques_contr.classList.replace("d-flex","d-none");
+        result.classList.replace("d-flex","d-none");
     }
 
     
@@ -93,7 +99,7 @@ input_age.addEventListener("change" , function(){
     });
 input_poid.addEventListener("change" , function(){
         input_poid.style.border="1px solid #7F7F7F";
-        if(input_poid.value >= 26 && input_poid.value <= 200){
+        if(input_poid.value >= 20 && input_poid.value <= 200){
             next_ques.disabled = false;
         }else{
             next_ques.disabled = true;
@@ -102,7 +108,7 @@ input_poid.addEventListener("change" , function(){
     });
 input_tall.addEventListener("change" , function(){
         input_tall.style.border="1px solid #7F7F7F";
-        if(input_tall.value >= 26 && input_tall.value <= 200){
+        if(input_tall.value >= 80 && input_tall.value <= 250){
             next_ques.disabled = false;
         }else{
             next_ques.disabled = true;
