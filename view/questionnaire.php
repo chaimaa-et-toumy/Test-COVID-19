@@ -195,7 +195,7 @@ include '../includes/nav-bar.php';
                         <label class="form-check-label value" for="inlineRadio15">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="gêne_respiratoire" id="inlineRadio16" value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="gene_respiratoire" id="inlineRadio16" value="Non">
                         <label class="form-check-label value" for="inlineRadio16">Non</label>
                     </div>
                 </div>
