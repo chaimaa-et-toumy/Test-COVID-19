@@ -178,6 +178,10 @@ arri.facteur_min = facteur_min;
 arri.facteur_maj = facteur_maj;
 
 let check =document.getElementById("check")
+function length(facteur){
+    let lght = Object.keys(facteur).length
+    return lght;
+}
 
 check.addEventListener("click", function() {
     globalThis.answer = document.forms['Covid'];
@@ -219,21 +223,22 @@ check.addEventListener("click", function() {
             arri.prononstique[answer[i].name] = answer[i].value
         }
     }
-    function length(facteur){
-       let lght = Object.keys(facteur).length
-        return lght;
-    }
-
     if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
         if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
             console.log("nous vous conseillons de rester à votre domicile et\n" +
                 "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
                 "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.")
         }
-        else{
-            console.log('besseha')
+        if(length(prononstique) >= 1){
+            if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
+                console.log("nous vous conseillons de rester à votre domicile et\n" +
+                    "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
+                    "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.")
+            }
+            if(length(facteur_min) >= 2 || length(facteur_maj) >= 1){
+                console.log("141")
+            }
         }
-
     }
 
   
