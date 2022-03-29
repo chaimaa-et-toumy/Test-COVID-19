@@ -46,16 +46,14 @@ prev_ques.onclick=function(){
     
 }
 next_ques.onclick=function(){
-    if(nbrQues == 22){
-        next_ques.classList.replace("d-none","test");
-        show_rslt.classList.replace("d-block","d-none");
-    }
     if(nbrQues == 23){
         btn_n_p.classList.replace("d-flex","d-none"); 
         progress_bar2.classList.replace("d-flex","d-none");
+
         step_ques.classList.replace("stepper-blue","test");
         step_reslt.classList.replace("test","stepper-blue");
-        ques_contr.classList.replace("d-flex","d-none");
+
+        ques_contr.classList.replace("d-none","d-flex");
         result.classList.replace("d-flex","d-none");
     }
 
@@ -138,12 +136,12 @@ next.addEventListener("click", () =>{
         nbrQues++;
         prev.classList.remove("d-none")
 
-        // if(nbrQues == 23){
-        //     termine.classList.remove("d-none")
-        //     // next.classList.add("d-none")
+        if(nbrQues == 23){
+            termine.classList.remove("d-none")
+            next.classList.add("d-none")
             
 
-        // }
+        }
        
         progress_bar.style.width = prog+"%";
         nbr_Q.innerHTML = nbrQues +"/23";
