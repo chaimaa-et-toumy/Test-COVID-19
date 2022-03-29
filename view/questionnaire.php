@@ -88,7 +88,7 @@ include '../includes/nav-bar.php';
                         (frissons, sueurs) ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" key="fievere" type="radio" name="fievre" id="inlineRadio1" value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="fievre" id="inlineRadio1" value="oui">
                         <label class="form-check-label value" for="inlineRadio1">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -100,7 +100,7 @@ include '../includes/nav-bar.php';
                     <p class="h3 question-color">Quelle est votre température corporelle ? </p>
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
-                            <input type="number" class="form-control inputs" id="input_temperateur" placeholder="34-42" name="température" value="" />
+                            <input type="number" class="form-control inputs" id="input_temperateur" placeholder="34-42" name="temperature" value="" />
                             <span class="btn btn-light" style="border: 1px solid #ced4da;">degre</span>
                         </div>
                     </div>
@@ -175,11 +175,11 @@ include '../includes/nav-bar.php';
                         depuis plus de 24h ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="difficultés" id="inlineRadio13" value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="alimentation" id="inlineRadio13" value="oui">
                         <label class="form-check-label value" for="inlineRadio13">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="difficultés" id="inlineRadio14" value="Non">
+                        <input class="form-check-input inputs fs-5" type="radio" name="alimentation" id="inlineRadio14" value="Non">
                         <label class="form-check-label value" for="inlineRadio14">Non</label>
                     </div>
                 </div>
@@ -188,7 +188,7 @@ include '../includes/nav-bar.php';
                         respiratoire habituelle ?
                     </p>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input inputs fs-5" type="radio" name="gêne_respiratoire" id="inlineRadio15" value="oui">
+                        <input class="form-check-input inputs fs-5" type="radio" name="gene_respiratoire" id="inlineRadio15" value="oui">
                         <label class="form-check-label value" for="inlineRadio15">Oui</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -236,7 +236,7 @@ include '../includes/nav-bar.php';
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
                             <input type="number" class="form-control inputs" id="input_age" name="age" placeholder="15-110" value="" />
-                            <span" class="btn btn-light" style="border: 1px solid #ced4da;"> Age </span>
+                            <span class="btn btn-light" style="border: 1px solid #ced4da;"> Age </span>
                         </div>
                     </div>
                 </div>
@@ -246,7 +246,7 @@ include '../includes/nav-bar.php';
                     <div class="d-flex justify-content-center">
                         <div class="input-group w-50">
                             <input type="number" class="form-control inputs" id="input_poid" name="poids" placeholder="20-250" value="" />
-                            <span" class="btn btn-light" style="border: 1px solid #ced4da;"> Kg </span>
+                            <span class="btn btn-light" style="border: 1px solid #ced4da;"> Kg </span>
                         </div>
                     </div>
 
@@ -395,11 +395,12 @@ include '../includes/nav-bar.php';
             <button class="btn fw-bold suivant text-white px-4 py-2 btn-next" data-bs-target="#carouselExampleControls" data-bs-slide="next" id="next_ques">
                 suivant
             </button>
-            <a href="Resulte.php" class="btn fw-bold suivant text-white px-4 py-2 btn-termine d-none">
+            <a id="check" class="btn fw-bold suivant text-white px-4 py-2 btn-termine d-none">
                 Termine le test
             </a>
         </div>
     </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
