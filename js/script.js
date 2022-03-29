@@ -220,6 +220,18 @@ check.addEventListener("click", function() {
         return lght;
     }
 
+    if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
+        if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
+            console.log("nous vous conseillons de rester à votre domicile et\n" +
+                "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
+                "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.")
+        }
+        else{
+            console.log('besseha')
+        }
+
+    }
+
   
 })
 
