@@ -6,7 +6,7 @@
 }
 /* ================ */
 .blue{
-    background-color: var(--blue1);
+    color: var(--blue1);
 }
 .green1{
     color: var(--green1);
@@ -31,9 +31,8 @@
     top: -5px;
 }
 .ques-line span:nth-child(2){
-    left: 50%;
+    left: 49%;
     top: -5px;
-    transform: translateX(-50%);
 }
 .ques-line span:nth-child(3){
     right: -5px;

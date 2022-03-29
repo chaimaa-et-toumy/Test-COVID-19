@@ -31,13 +31,9 @@ demarrer.addEventListener("click" , () => {
 
 })
 
-// ====creat object
-// let obj = {};
-
-// next_ques.addEventListener('click' , function(){
-//     obj.push(input.key,input.value);
-// })
+// ====cr
 prev_ques.onclick=function(){
+    next_ques.disabled = false;
     if(nbrQues == 1){
         btn_n_p.classList.replace("d-flex","d-none"); 
         progress_bar2.classList.replace("d-flex","d-none");
@@ -46,9 +42,22 @@ prev_ques.onclick=function(){
     }
     
 }
+next_ques.onclick=function(){
+    if(nbrQues == 22){
+        next_ques.innerText ="Terminer le test"
+    }
+    if(nbrQues == 23){
+        btn_n_p.classList.replace("d-flex","d-none"); 
+        progress_bar2.classList.replace("d-flex","d-none");
+        step_ques.classList.replace("stepper-blue","test");
+        step_reslt.classList.replace("test","stepper-blue");
+    }
+
+    
+}
 // =================input validation check===============
 inputs.forEach(input => {
-
+    
     input.addEventListener("change" , function() {
         input.style.border="1px solid #7F7F7F";
         if(input.checked){
@@ -91,7 +100,7 @@ input_poid.addEventListener("change" , function(){
             input_poid.style.border="1px solid red"
         }
     });
-tall.addEventListener("change" , function(){
+input_tall.addEventListener("change" , function(){
         input_tall.style.border="1px solid #7F7F7F";
         if(input_tall.value >= 26 && input_tall.value <= 200){
             next_ques.disabled = false;
@@ -123,12 +132,12 @@ next.addEventListener("click", () =>{
         nbrQues++;
         prev.classList.remove("d-none")
 
-        if(nbrQues == 23){
-            termine.classList.remove("d-none")
-            next.classList.add("d-none")
+        // if(nbrQues == 23){
+        //     termine.classList.remove("d-none")
+        //     // next.classList.add("d-none")
             
 
-        }
+        // }
        
         progress_bar.style.width = prog+"%";
         nbr_Q.innerHTML = nbrQues +"/23";
