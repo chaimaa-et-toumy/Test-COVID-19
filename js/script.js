@@ -166,7 +166,7 @@ prev.addEventListener("click", () =>{
 
     }
 })
-// =================result===============
+/**********************************result********************************/
 let arri = new Array();
 let symptome = new Array();
 let prononstique= new Array();
@@ -178,15 +178,21 @@ arri.facteur_min = facteur_min;
 arri.facteur_maj = facteur_maj;
 
 let check =document.getElementById("check")
+
+/*****************Count the length of obejects******************/
+
 function length(facteur){
     let lght = Object.keys(facteur).length
     return lght;
 }
 
+/*****************the main result function******************/
+
 check.addEventListener("click", function() {
     globalThis.answer = document.forms['Covid'];
 
-    for (let i = 0; i < 23; i++) {
+    /*****************Store the answers in the objects******************/
+    for (let i = 0; i < 24; i++) {
         if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
             arri.symptome[answer[i].name] = answer[i].value
 
@@ -218,27 +224,58 @@ check.addEventListener("click", function() {
             /**************************end*************************/
         }
     }
-    for (let i = 23; i < answer.length ; i++) {
+    for (let i = 24; i < answer.length ; i++) {
         if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
             arri.prononstique[answer[i].name] = answer[i].value
         }
     }
-    if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
-        if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
-            console.log("nous vous conseillons de rester à votre domicile et\n" +
-                "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
-                "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.")
+ /*****************Case verification******************/
+    /*****************persone(1) fievre et toux******************/
+    if((arri.symptome.toux == "oui" && arri.symptome.mal == "oui") || (arri.symptome.toux == "oui" && arri.symptome.courbatures == "oui")){
+    /***case (1.1) ***/
+        if(length(prononstique) == 0 && length(facteur_maj) == 0){
+            if( length(facteur_min) == 0 && answer.age.value < 50){
+                console.log("msg1.1.1")
+            }
+            if(( length(facteur_min) == 0 && (answer.age.value >= 50 && answer.age.value <=69)) || length(facteur_min) > 0){
+                console.log("msg1.1.2")
+            }
         }
-        if(length(prononstique) >= 1){
-            if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
-                console.log("nous vous conseillons de rester à votre domicile et\n" +
-                    "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
-                    "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.")
+    /***case (1.2) ***/
+        else if(length(prononstique) > 0 && length(facteur_maj) == 0){
+            if( length(facteur_min) == 0 || length(facteur_min) == 1 ){
+                console.log("msg1.2.1")
+            }
+            if(length(facteur_min) >= 2){
+                console.log("141")
+            }
+        }
+    /***case (1.3) ***/
+        else if(length(facteur_maj) > 0){
+                console.log("141")
+            }
+     }
+
+    /*****************persone(2) fievre et toux******************/
+    else if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
+        /***case (2.1) ***/
+            if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
+                console.log("msg2.1.1")
+            }
+
+
+        /***case (2.2)******/
+            else if(length(prononstique) >= 1 && length(facteur_maj) == 0){
+                if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
+                    console.log("msg2.2.1")
+                }
+                if(length(facteur_min) >= 2){
+                    console.log("141")
+                }
             }
             if(length(facteur_min) >= 2 || length(facteur_maj) >= 1){
                 console.log("141")
             }
-        }
     }
 
   
