@@ -183,38 +183,41 @@ check.addEventListener("click", function() {
             arri.symptome[answer[i].name] = answer[i].value
 
               /**************************facteur mineur*************************/
-    if (answer.fievre.value == 'oui') {
-        if (answer.temperature.value >= 39) {
-            arri.facteur_min.temperature = answer.temperature.value
-        }
-    }
-    if(answer.fatigue.value == "oui"){
-        arri.facteur_min.fatigue = answer.fatigue.value
-    }
-    if(answer.sentez.value == "oui"){
-        arri.facteur_min.sentez = answer.sentez.value
-    }
-    /**************************facteur majeur*************************/
+            if (answer.fievre.value == 'oui') {
+                if (answer.temperature.value >= 39) {
+                    arri.facteur_min.temperature = answer.temperature.value
+                }
+            }
+            if(answer.fatigue.value == "oui"){
+                arri.facteur_min.fatigue = answer.fatigue.value
+            }
+            if(answer.sentez.value == "oui"){
+                arri.facteur_min.sentez = answer.sentez.value
+            }
+            /**************************facteur majeur*************************/
 
-    if (answer.fievre.value == 'oui') {
-        if (answer.temperature.value <= 35) {
-            arri.facteur_maj.temperature = answer.temperature.value
-        }
-    }
-    if(answer.gene_respiratoire.value == "oui"){
-        arri.facteur_maj.gene_respiratoire = answer.gene_respiratoire.value
-    }
-    if(answer.alimentation.value == "oui"){
-        arri.facteur_maj.alimentation = answer.alimentation.value
-    }
-    /**************************end*************************/
-
+            if (answer.fievre.value == 'oui') {
+                if (answer.temperature.value <= 35) {
+                    arri.facteur_maj.temperature = answer.temperature.value
+                }
+            }
+            if(answer.gene_respiratoire.value == "oui"){
+                arri.facteur_maj.gene_respiratoire = answer.gene_respiratoire.value
+            }
+            if(answer.alimentation.value == "oui"){
+                arri.facteur_maj.alimentation = answer.alimentation.value
+            }
+            /**************************end*************************/
         }
     }
     for (let i = 23; i < answer.length ; i++) {
-        if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui' || answer[i].type == "number") {
+        if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
             arri.prononstique[answer[i].name] = answer[i].value
         }
+    }
+    function length(facteur){
+       let lght = Object.keys(facteur).length
+        return lght;
     }
 
   
