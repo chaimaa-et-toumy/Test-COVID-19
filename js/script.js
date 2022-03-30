@@ -19,7 +19,6 @@ const step_reslt = document.getElementById("stepper_reslt");
 const next_ques = document.getElementById("next_ques");
 const prev_ques = document.getElementById("prev_ques");
 const inputs = document.querySelectorAll(".inputs");
-const show_rslt = document.querySelector("#check");
 const ques_contr = document.querySelector(".carousel");
 const result = document.querySelector(".resulte")
  next_ques.disabled = true;
@@ -45,20 +44,7 @@ prev_ques.onclick=function(){
     }
     
 }
-next_ques.onclick=function(){
-    if(nbrQues == 23){
-        btn_n_p.classList.replace("d-flex","d-none"); 
-        progress_bar2.classList.replace("d-flex","d-none");
 
-        step_ques.classList.replace("stepper-blue","test");
-        step_reslt.classList.replace("test","stepper-blue");
-
-        ques_contr.classList.replace("d-none","d-flex");
-        result.classList.replace("d-flex","d-none");
-    }
-
-    
-}
 // =================input validation check===============
 inputs.forEach(input => {
     
@@ -177,7 +163,14 @@ arri.prononstique = prononstique;
 arri.facteur_min = facteur_min;
 arri.facteur_maj = facteur_maj;
 
-let check =document.getElementById("check")
+let msg1 = "nous vous conseillons de rester à votre domicile et\n" +
+            "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
+            "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.";
+let msg2 = "téléconsultation ou médecin généraliste ou visite à domicile";
+let msg3 = " appel 141";
+
+let check =document.getElementById("check");
+const affich_result = document.querySelector("#resultmsg");
 
 /*****************Count the length of obejects******************/
 
@@ -191,6 +184,14 @@ function length(facteur){
 check.addEventListener("click", function() {
     globalThis.answer = document.forms['Covid'];
 
+    // show page result
+    result.classList.replace("d-none","d-flex");
+    ques_contr.classList.replace("d-flex","d-none");
+    btn_n_p.classList.replace("d-flex","d-none"); 
+    progress_bar2.classList.replace("d-flex","d-none");
+    step_ques.classList.replace("stepper-blue","test");
+    step_reslt.classList.replace("test","stepper-blue");
+    // ========
     /*****************Store the answers in the objects******************/
     for (let i = 0; i < 24; i++) {
         if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
@@ -229,6 +230,17 @@ check.addEventListener("click", function() {
             arri.prononstique[answer[i].name] = answer[i].value
         }
     }
+    if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
+        if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
+            affich_result.innerText =msg1 ;
+            // ===
+            console.log(msg1)
+        }
+        if(length(prononstique) >= 1){
+            if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
+                affich_result.innerText =msg1
+            // ===
+                console.log(msg1)
  /*****************Case verification******************/
     /*****************persone(1) fievre et toux******************/
     if((arri.symptome.toux == "oui" && arri.symptome.mal == "oui") || (arri.symptome.toux == "oui" && arri.symptome.courbatures == "oui")){
@@ -274,11 +286,13 @@ check.addEventListener("click", function() {
                 }
             }
             if(length(facteur_min) >= 2 || length(facteur_maj) >= 1){
+                affich_result.innerText="141"
                 console.log("141")
             }
     }
-
-  
+            }
+        }
+    }
 })
 
 
