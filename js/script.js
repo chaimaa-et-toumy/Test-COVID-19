@@ -19,7 +19,6 @@ const step_reslt = document.getElementById("stepper_reslt");
 const next_ques = document.getElementById("next_ques");
 const prev_ques = document.getElementById("prev_ques");
 const inputs = document.querySelectorAll(".inputs");
-const show_rslt = document.querySelector("#check");
 const ques_contr = document.querySelector(".carousel");
 const result = document.querySelector(".resulte")
  next_ques.disabled = true;
@@ -45,20 +44,7 @@ prev_ques.onclick=function(){
     }
     
 }
-next_ques.onclick=function(){
-    if(nbrQues == 23){
-        btn_n_p.classList.replace("d-flex","d-none"); 
-        progress_bar2.classList.replace("d-flex","d-none");
 
-        step_ques.classList.replace("stepper-blue","test");
-        step_reslt.classList.replace("test","stepper-blue");
-
-        ques_contr.classList.replace("d-none","d-flex");
-        result.classList.replace("d-flex","d-none");
-    }
-
-    
-}
 // =================input validation check===============
 inputs.forEach(input => {
     
@@ -177,7 +163,21 @@ arri.prononstique = prononstique;
 arri.facteur_min = facteur_min;
 arri.facteur_maj = facteur_maj;
 
-let check =document.getElementById("check")
+let msg1 = "nous vous conseillons de rester à votre domicile et\n" +
+            "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
+            "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.";
+
+let msg2 = "téléconsultation ou médecin généraliste ou visite à domicile \n " +
+            "appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.";
+
+let msg3 = " Appel 141";
+
+let msg4 = "Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141."
+
+let msg5 = "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation. Pour toute information concernant le Covid-19 allez vers la page d’accueil."
+
+let check =document.getElementById("check");
+const affich_result = document.querySelector("#resultmsg");
 
 /*****************Count the length of obejects******************/
 
@@ -191,6 +191,14 @@ function length(facteur){
 check.addEventListener("click", function() {
     globalThis.answer = document.forms['Covid'];
 
+    // show page result
+    result.classList.replace("d-none","d-flex");
+    ques_contr.classList.replace("d-flex","d-none");
+    btn_n_p.classList.replace("d-flex","d-none"); 
+    progress_bar2.classList.replace("d-flex","d-none");
+    step_ques.classList.replace("stepper-blue","test");
+    step_reslt.classList.replace("test","stepper-blue");
+    // ========
     /*****************Store the answers in the objects******************/
     for (let i = 0; i < 24; i++) {
         if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
@@ -235,24 +243,29 @@ check.addEventListener("click", function() {
     /***case (1.1) ***/
         if(length(prononstique) == 0 && length(facteur_maj) == 0){
             if( length(facteur_min) == 0 && answer.age.value < 50){
-                console.log("msg1.1.1")
+                affich_result.innerText =msg1 ;
+                console.log(msg1)
             }
             if(( length(facteur_min) == 0 && (answer.age.value >= 50 && answer.age.value <=69)) || length(facteur_min) > 0){
-                console.log("msg1.1.2")
+                affich_result.innerText =msg2 ;
+                console.log(msg2)
             }
         }
     /***case (1.2) ***/
         else if(length(prononstique) > 0 && length(facteur_maj) == 0){
             if( length(facteur_min) == 0 || length(facteur_min) == 1 ){
-                console.log("msg1.2.1")
+                affich_result.innerText =msg2 ;
+                console.log(msg2)
             }
             if(length(facteur_min) >= 2){
-                console.log("141")
+                affich_result.innerText =msg3 ;
+                console.log(msg3)
             }
         }
     /***case (1.3) ***/
         else if(length(facteur_maj) > 0){
-                console.log("141")
+                affich_result.innerText =msg3 ;
+                console.log(msg3)
             }
      }
 
@@ -261,38 +274,46 @@ check.addEventListener("click", function() {
         /***case (2.1) ***/
             if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
                 if(length(facteur_min) >= 0 ){
-                    console.log("msg2.2.1")
+                    affich_result.innerText =msg2 ;
+                    console.log(msg2)
                 }
             }
-
-
         /***case (2.2)******/
             else if(length(prononstique) >= 1 && length(facteur_maj) == 0){
+
                 if( length(facteur_min) == 0 || length(facteur_min) == 1 ){
-                    console.log("msg2.2.1")
+                    affich_result.innerText =msg2 ;
+                    console.log(msg2)
                 }
                 if(length(facteur_min) >= 2){
-                    console.log("141")
+                    affich_result.innerText =msg3 ;
+                    console.log(msg3)
                 }
             }
+
         /***case (2.3)******/
             if(length(facteur_maj) >= 1){
-                console.log("141")
+                affich_result.innerText =msg3;
+                console.log(msg3)
             }
     }
+              
     /*****************persone(3) fievre ou toux ou mal de gorge ou courbature******************/
     else if (arri.symptome.fievre == "oui" || arri.symptome.toux == "oui" || arri.symptome.courbature == "oui" || arri.symptome.mal == "oui"){
         if (length(prononstique) == 0 && (length(facteur_maj) == 0 && length(facteur_min) == 0)){
-            console.log("moindre doute")
+            affich_result.innerText =msg4 ;
+            console.log(msg4)
         }
         if(length(prononstique) >= 0 || (length(facteur_maj) >= 0 || length(facteur_min) >= 0)){
-            console.log("msg4")
+            affich_result.innerText =msg4 ;
+            console.log(msg4)
         }
     }
     /*****************persone(4) Sans symptome******************/
 
     else if (length(symptome) == 0){
-        console.log("mafikch covid")
+        affich_result.innerText =msg5 ;
+        console.log(msg5)
     }
 
   
