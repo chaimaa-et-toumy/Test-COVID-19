@@ -166,8 +166,15 @@ arri.facteur_maj = facteur_maj;
 let msg1 = "nous vous conseillons de rester à votre domicile et\n" +
             "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
             "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.";
-let msg2 = "téléconsultation ou médecin généraliste ou visite à domicile";
-let msg3 = " appel 141";
+
+let msg2 = "téléconsultation ou médecin généraliste ou visite à domicile \n " +
+            "appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.";
+
+let msg3 = " Appel 141";
+
+let msg4 = "Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé. Au moindre doute, appelez le 141."
+
+let msg5 = "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation. Pour toute information concernant le Covid-19 allez vers la page d’accueil."
 
 let check =document.getElementById("check");
 const affich_result = document.querySelector("#resultmsg");
@@ -230,41 +237,35 @@ check.addEventListener("click", function() {
             arri.prononstique[answer[i].name] = answer[i].value
         }
     }
-    if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
-        if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
-            affich_result.innerText =msg1 ;
-            // ===
-            console.log(msg1)
-        }
-        if(length(prononstique) >= 1){
-            if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
-                affich_result.innerText =msg1
-            // ===
-                console.log(msg1)
  /*****************Case verification******************/
     /*****************persone(1) fievre et toux******************/
     if((arri.symptome.toux == "oui" && arri.symptome.mal == "oui") || (arri.symptome.toux == "oui" && arri.symptome.courbatures == "oui")){
     /***case (1.1) ***/
         if(length(prononstique) == 0 && length(facteur_maj) == 0){
             if( length(facteur_min) == 0 && answer.age.value < 50){
-                console.log("msg1.1.1")
+                affich_result.innerText =msg1 ;
+                console.log(msg1)
             }
             if(( length(facteur_min) == 0 && (answer.age.value >= 50 && answer.age.value <=69)) || length(facteur_min) > 0){
-                console.log("msg1.1.2")
+                affich_result.innerText =msg2 ;
+                console.log(msg2)
             }
         }
     /***case (1.2) ***/
         else if(length(prononstique) > 0 && length(facteur_maj) == 0){
             if( length(facteur_min) == 0 || length(facteur_min) == 1 ){
-                console.log("msg1.2.1")
+                affich_result.innerText =msg2 ;
+                console.log(msg2)
             }
             if(length(facteur_min) >= 2){
-                console.log("141")
+                affich_result.innerText =msg3 ;
+                console.log(msg3)
             }
         }
     /***case (1.3) ***/
         else if(length(facteur_maj) > 0){
-                console.log("141")
+                affich_result.innerText =msg3 ;
+                console.log(msg3)
             }
      }
 
@@ -272,42 +273,43 @@ check.addEventListener("click", function() {
     else if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
         /***case (2.1) ***/
             if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
-                console.log("msg2.1.1")
+                affich_result.innerText =msg2 ;
+                console.log(msg2)
             }
 
 
         /***case (2.2)******/
             else if(length(prononstique) >= 1 && length(facteur_maj) == 0){
                 if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
-                    console.log("msg2.2.1")
+                    affich_result.innerText =msg2 ;
+                    console.log(msg2)
                 }
                 if(length(facteur_min) >= 2){
-                    console.log("141")
+                    affich_result.innerText =msg3 ;
+                    console.log(msg3)
                 }
             }
-            if(length(facteur_min) >= 2 || length(facteur_maj) >= 1){
-                affich_result.innerText="141"
-                console.log("141")
+            if(length(facteur_maj) >= 1){
+                affich_result.innerText =msg3;
+                console.log(msg3)
             }
     }
               
     /*****************persone(3) fievre ou toux ou mal de gorge ou courbature******************/
     else if (arri.symptome.fievre == "oui" || arri.symptome.toux == "oui" || arri.symptome.courbature == "oui" || arri.symptome.mal == "oui"){
         if (length(prononstique) == 0 && (length(facteur_maj) == 0 && length(facteur_min) == 0)){
-            console.log("moindre doute")
+            affich_result.innerText =msg4 ;
+            console.log(msg4)
         }
     }
     /*****************persone(4) Sans symptome******************/
 
     else if (length(symptome) == 0){
-        console.log("mafikch covid")
+        affich_result.innerText =msg5 ;
+        console.log(msg5)
     }
 
   
-
-            }
-        }
-    }
 })
 
 
