@@ -397,9 +397,9 @@ include '../includes/nav-bar.php';
             <h2 class="pt-2 text-success m-0">Votre Cas.</h2>
 
             <div class="content card  px-5 pb-4 pt-2 rounded-3" style="width: 77%;">
-                    <h1 class=" text-center text-white" >....</h1>
+                    <h1 class=" text-center text-white" >...</h1>
                     
-                    <p id="resultmsg" class="card-text text-center fs-4 text-warning"> 
+                    <p id="resultmsg" class="card-text text-center fs-4 text-warning fw-bold"> 
                     </p>
             </div>
             <a href="questionnaire.php" class="ques-btn fw-bold fs-5 text-center text-decoration-none text-white" >recommence le test</a> 
