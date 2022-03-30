@@ -42,24 +42,9 @@ prev_ques.onclick=function(){
         step_info.classList.replace("test","stepper-blue");
         step_ques.classList.replace("stepper-blue","test");
     }
-    if(nbrQues == 23){
-        
-    }
-}
-next_ques.onclick=function(){
-    if(nbrQues == 23){
-        btn_n_p.classList.replace("d-flex","d-none"); 
-        progress_bar2.classList.replace("d-flex","d-none");
-
-        step_ques.classList.replace("stepper-blue","test");
-        step_reslt.classList.replace("test","stepper-blue");
-
-        ques_contr.classList.replace("d-none","d-flex");
-        result.classList.replace("d-flex","d-none");
-    }
-
     
 }
+
 // =================input validation check===============
 inputs.forEach(input => {
     
@@ -184,9 +169,19 @@ function length(facteur){
     return lght;
 }
 
+const  affich_result = document.querySelector("#resultmsg");
+
 check.addEventListener("click", function() {
     globalThis.answer = document.forms['Covid'];
 
+    // show page result
+    result.classList.replace("d-none","d-flex");
+    ques_contr.classList.replace("d-flex","d-none");
+    btn_n_p.classList.replace("d-flex","d-none"); 
+    progress_bar2.classList.replace("d-flex","d-none");
+    step_ques.classList.replace("stepper-blue","test");
+    step_reslt.classList.replace("test","stepper-blue");
+    // ========
     for (let i = 0; i < 23; i++) {
         if (answer[i].type == "radio" && answer[i].checked && answer[i].value == 'oui') {
             arri.symptome[answer[i].name] = answer[i].value
@@ -226,17 +221,26 @@ check.addEventListener("click", function() {
     }
     if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
         if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
+            affich_result.innerText ="nous vous conseillons de rester à votre domicile et\n" +
+            "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
+            "aussi utiliser à nouveau l’application pour réévaluer vos symptômes."
+            // ===
             console.log("nous vous conseillons de rester à votre domicile et\n" +
                 "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
                 "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.")
         }
         if(length(prononstique) >= 1){
             if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
+                affich_result.innerText ="nous vous conseillons de rester à votre domicile et\n" +
+                "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
+                "aussi utiliser à nouveau l’application pour réévaluer vos symptômes."
+            // ===
                 console.log("nous vous conseillons de rester à votre domicile et\n" +
                     "de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez\n" +
                     "aussi utiliser à nouveau l’application pour réévaluer vos symptômes.")
             }
             if(length(facteur_min) >= 2 || length(facteur_maj) >= 1){
+                affich_result.innerText="141"
                 console.log("141")
             }
         }
