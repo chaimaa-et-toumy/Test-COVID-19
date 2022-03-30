@@ -394,7 +394,7 @@ include '../includes/nav-bar.php';
                 
         <!--  -->
         <main class=" resulte d-none flex-column justify-content-center align-items-center gap-3 mt-5" style="margin-top:70px">
-            <h2 class="pt-2 text-success m-0">Lorem ipsum dolor sit amet consectetur.</h2>
+            <h2 class="pt-2 text-success m-0">Votre Cas.</h2>
 
             <div class="content card  px-5 pb-4 pt-2 rounded-3" style="width: 77%;">
                     <h1 class=" text-center text-white" >....</h1>
