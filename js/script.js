@@ -273,14 +273,15 @@ check.addEventListener("click", function() {
     else if(arri.symptome.fievre == "oui" && arri.symptome.toux == "oui"){
         /***case (2.1) ***/
             if(length(prononstique) == 0 && length(facteur_maj) == 0 ){
-                affich_result.innerText =msg2 ;
-                console.log(msg2)
+                if(length(facteur_min) >= 0 ){
+                    affich_result.innerText =msg2 ;
+                    console.log(msg2)
+                }
             }
-
-
         /***case (2.2)******/
             else if(length(prononstique) >= 1 && length(facteur_maj) == 0){
-                if((length(facteur_maj) == 0 && length(facteur_min) == 0) || length(facteur_min) == 1 ){
+
+                if( length(facteur_min) == 0 || length(facteur_min) == 1 ){
                     affich_result.innerText =msg2 ;
                     console.log(msg2)
                 }
@@ -289,6 +290,8 @@ check.addEventListener("click", function() {
                     console.log(msg3)
                 }
             }
+
+        /***case (2.3)******/
             if(length(facteur_maj) >= 1){
                 affich_result.innerText =msg3;
                 console.log(msg3)
@@ -298,6 +301,10 @@ check.addEventListener("click", function() {
     /*****************persone(3) fievre ou toux ou mal de gorge ou courbature******************/
     else if (arri.symptome.fievre == "oui" || arri.symptome.toux == "oui" || arri.symptome.courbature == "oui" || arri.symptome.mal == "oui"){
         if (length(prononstique) == 0 && (length(facteur_maj) == 0 && length(facteur_min) == 0)){
+            affich_result.innerText =msg4 ;
+            console.log(msg4)
+        }
+        if(length(prononstique) >= 0 || (length(facteur_maj) >= 0 || length(facteur_min) >= 0)){
             affich_result.innerText =msg4 ;
             console.log(msg4)
         }
