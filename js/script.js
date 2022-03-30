@@ -277,6 +277,17 @@ check.addEventListener("click", function() {
                 console.log("141")
             }
     }
+    /*****************persone(3) fievre ou toux ou mal de gorge ou courbature******************/
+    else if (arri.symptome.fievre == "oui" || arri.symptome.toux == "oui" || arri.symptome.courbature == "oui" || arri.symptome.mal == "oui"){
+        if (length(prononstique) == 0 && (length(facteur_maj) == 0 && length(facteur_min) == 0)){
+            console.log("moindre doute")
+        }
+    }
+    /*****************persone(4) Sans symptome******************/
+
+    else if (length(symptome) == 0){
+        console.log("mafikch covid")
+    }
 
   
 })
